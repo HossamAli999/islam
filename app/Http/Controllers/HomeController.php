@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $quran = Http::get('https://api.quran.com/api/v4/chapters?language=en')->json();
+        return view('home',['quran' => $quran]);
+    }
+    public function reference()
+    {
+        $quran = Http::get('https://api.quran.com/api/v4/chapters?language=en')->json();
+        return view('pages.reference',['quran' => $quran]);
     }
 }

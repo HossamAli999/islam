@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    <h1>Quran</h1>
+    <ul>
+    @foreach ($quran['chapters'] as $item)
+        <li>{{$item['revelation_place']}} , {{$item['revelation_order']}} {{$item['name_simple']}} {{$item['name_arabic']}}</li>
+    @endforeach
+    {{-- {{print_r($quran['chapters'])}} --}}
+    </ul>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
