@@ -20,12 +20,14 @@ class pagesController extends Controller
     public function reference()
     {
         $quran = Http::get('https://api.quran.com/api/v4/chapters?language=en')->json();
-        return view('pages.reference',['quran' => $quran]);
+        $quran1 = Http::get('https://api.quran.com/api/v4/chapter_recitations/1?language=en')->json();
+        return view('pages.reference',['quran' => $quran
+        ,'quran1' => $quran1]);
     }
     
     public function listen()
     {
-        $quran = Http::get('https://api.quran.com/api/v4/chapters?language=en')->json();
-        return view('pages.reference',['quran' => $quran]);
+        $quran = Http::get('https://api.quran.com/api/v4/chapter_recitations/1?language=en')->json();
+        return view('pages.listen',['quran' => $quran]);
     }
 }

@@ -20,6 +20,8 @@
         <th>Arabic Name</th>
         <th>verses count</th>
         <th>revelation place</th>
+
+        {{-- <th>file size</th> --}}
       </tr> 
 
     </thead>
@@ -28,14 +30,20 @@
     <!--Table body-->
     <tbody>
     @foreach ($quran['chapters'] as $item)
+    
+    
       <tr>
         <th scope="row">{{$item['id']}}</th>
         <td>{{$item['name_simple']}}</td>
         <td>{{$item['name_arabic']}}</td>
         <td>{{$item['verses_count']}}</td>
         <td>{{$item['revelation_place']}}</td>
+        {{-- <td><audio controls>
+          <source src="{{$item['audio_url']}}" type="audio/mpeg">
+        </audio></td> --}}
 
       </tr> 
+
     @endforeach 
     </tbody>
     <!--Table body-->

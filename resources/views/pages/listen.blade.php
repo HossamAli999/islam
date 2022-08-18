@@ -18,8 +18,9 @@
         <th>#</th>
         <th>Name</th>
         <th>Arabic Name</th>
-        <th>verses count</th>
-        <th>revelation place</th>
+        <th>listen</th>
+        <th>Download</th>
+        <th>file size</th>
       </tr> 
 
     </thead>
@@ -27,13 +28,21 @@
   
     <!--Table body-->
     <tbody>
-    @foreach ($quran['chapters'] as $item)
+    @foreach ($quran['audio_files'] as $item)
       <tr>
         <th scope="row">{{$item['id']}}</th>
-        <td>{{$item['name_simple']}}</td>
-        <td>{{$item['name_arabic']}}</td>
-        <td>{{$item['verses_count']}}</td>
-        <td>{{$item['revelation_place']}}</td>
+        <td>{{$item['format']}}</td>
+        <td>
+          <td>
+          <audio controls src="{{$item['audio_url']}}">
+            Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+          </td>
+          <td><a href="{{$item['audio_url']}} "Download>Download audio </a>
+          </td>
+          </td>
+        <td>{{$item['file_size']}}</td>
 
       </tr> 
     @endforeach 
