@@ -18,7 +18,6 @@
       <tr>
         <th>#</th>
         <th>chapter number</th>
-        <th>رقم الجزء</th>
         <th>format</th>
         <th>listen</th>
         <th>file size</th>
@@ -33,7 +32,6 @@
       <tr>
         <th scope="row">{{$key+1}}</th>
         <td>{{NumConvert::word($item['chapter_id'])}}</td>
-        <td>{{Alkoumi\LaravelArabicTafqeet\Tafqeet::inArabic($item['chapter_id'])}}</td>
         <td>{{$item['format']}}</td>
         <td>
           <audio
