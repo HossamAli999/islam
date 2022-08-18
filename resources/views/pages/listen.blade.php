@@ -19,7 +19,6 @@
         <th>Name</th>
         <th>Arabic Name</th>
         <th>listen</th>
-        <th>Download</th>
         <th>file size</th>
       </tr> 
 
@@ -34,15 +33,16 @@
         <td>{{$item['format']}}</td>
         <td>
           <td>
-          <audio controls src="{{$item['audio_url']}}">
-            Your browser does not support the
-            <code>audio</code> element.
+          <audio
+            controls
+            preload="none"
+            src="{{$item['audio_url']}}"
+            type="audio/mpeg"
+            >
           </audio>
           </td>
-          <td><a href="{{$item['audio_url']}} "Download>Download audio </a>
           </td>
-          </td>
-        <td>{{$item['file_size']}}</td>
+        <td>{{$item['file_size']/1048576}}</td>
 
       </tr> 
     @endforeach 
