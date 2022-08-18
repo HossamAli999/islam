@@ -31,11 +31,11 @@
             <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+            <li><a href="{{route('listen')}}" class="nav-link px-2 link-dark">listen</a></li>
             <li><a href="{{route('reference')}}" class="nav-link px-2 link-dark">reference</a></li>
           </ul>
     
-          <div class="col-md-3 text-end">
+          {{-- <div class="col-md-3 text-end">
             @guest
                             @if (Route::has('login'))
                             <a  class="btn btn-outline-primary me-2"  href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -61,7 +61,7 @@
                                     </form>
                                 </div>
                         @endguest
-          </div>
+          </div> --}}
         </header>
       </div>
 
