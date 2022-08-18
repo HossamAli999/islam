@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
-    <h1>Quran</h1>
+    <h1>abdul baset mujawwad</h1>
     <ul>
    
         {{-- <li>{{$item['revelation_place']}} , {{$item['revelation_order']}} {{$item['name_simple']}} {{$item['name_arabic']}}</li> --}}
@@ -16,8 +17,9 @@
    
       <tr>
         <th>#</th>
-        <th>Name</th>
-        <th>Arabic Name</th>
+        <th>chapter number</th>
+        <th>رقم الجزء</th>
+        <th>format</th>
         <th>listen</th>
         <th>file size</th>
       </tr> 
@@ -27,12 +29,13 @@
   
     <!--Table body-->
     <tbody>
-    @foreach ($quran['audio_files'] as $item)
+    @foreach ($quran['audio_files'] as $key=>$item)
       <tr>
-        <th scope="row">{{$item['id']}}</th>
+        <th scope="row">{{$key+1}}</th>
+        <td>{{NumConvert::word($item['chapter_id'])}}</td>
+        <td>{{Alkoumi\LaravelArabicTafqeet\Tafqeet::inArabic($item['chapter_id'])}}</td>
         <td>{{$item['format']}}</td>
         <td>
-          <td>
           <audio
             controls
             preload="none"
@@ -40,9 +43,9 @@
             type="audio/mpeg"
             >
           </audio>
-          </td>
-          </td>
-        <td>{{$item['file_size']/1048576}}</td>
+        </td>
+        <td>{{ substr($item['file_size']/1048576, 0,5)}} MB</td>
+
 
       </tr> 
     @endforeach 

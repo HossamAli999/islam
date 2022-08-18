@@ -6,7 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "alkoumi/laravel-arabic-tafqeet": "dev-master",
         "guzzlehttp/guzzle": "^7.2",
+        "hnhdigital-os/laravel-number-converter": "^1.5",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
