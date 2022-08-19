@@ -25,12 +25,17 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('reference', [App\Http\Controllers\pagesController::class, 'reference'])->name('reference');
 Route::get('start', [App\Http\Controllers\pagesController::class, 'start'])->name('start');
+Route::get('contact', [App\Http\Controllers\pagesController::class, 'contact'])->name('contact');
+
+// for listing 
 Route::get('listen', [App\Http\Controllers\pagesController::class, 'listen'])->name('listen');
 
 
 // for newsletter subscription form
 Route::post('newsletter', [App\Http\Controllers\NewsletterController::class, 'newsletter'])->name('newsletter');
 
+// for contact form
+Route::post('contact-us', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.us.store');
 
 
 

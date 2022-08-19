@@ -36,4 +36,9 @@ class pagesController extends Controller
     {
         return view('pages.start');
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }
