@@ -120,7 +120,7 @@
                             <li class="active"><a href="{{route('start')}}">Home</a></li>
                             <li><a href="{{route('listen')}}">listen</a></li>
                             <li><a href="{{route('reference')}}">reference</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="#">Portfolio</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down<i
                                         class="fa fa-angle-down"></i></a>
@@ -131,8 +131,8 @@
                                     <li><a href="#">One</a></li>
                                 </ul>
                             </li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                 </div>
