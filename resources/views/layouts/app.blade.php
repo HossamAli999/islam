@@ -107,14 +107,18 @@
           </div>
     
           <div class="col-md-5 offset-md-1 mb-3">
-            <form>
+            <form action="{{route('newsletter')}}" method="POST"class="row g-3">
+              @csrf
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
               <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                <button class="btn btn-primary" type="button">Subscribe</button>
+                <input id="newsletter1" type="text" name="email" class="form-control" placeholder="Email address">
+                <input class="btn btn-primary" type="submit" value="Subscribe">
               </div>
+              @if (session('success_subscribed'))
+                        <p class="alert alert-success" role="alert">{{ session('success_subscribed') }}</p>
+              @endif
             </form>
           </div>
         </div>

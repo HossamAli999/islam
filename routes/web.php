@@ -27,6 +27,11 @@ Route::get('reference', [App\Http\Controllers\pagesController::class, 'reference
 Route::get('listen', [App\Http\Controllers\pagesController::class, 'listen'])->name('listen');
 
 
+// for newsletter subscription form
+Route::post('newsletter', [App\Http\Controllers\NewsletterController::class, 'newsletter'])->name('newsletter');
+
+
+
 
 Route::fallback(function(){
     return view("404/404");
