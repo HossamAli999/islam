@@ -17,8 +17,8 @@
    
       <tr>
         <th>#</th>
-        <th>chapter number</th>
-        <th>format</th>
+        {{-- <th>chapter number</th> --}}
+        {{-- <th>format</th> --}}
         <th>listen</th>
         <th>file size</th>
       </tr> 
@@ -30,9 +30,9 @@
     <tbody>
     @foreach ($quran['audio_files'] as $key=>$item)
       <tr>
-        <th scope="row">{{$key+1}}</th>
+        {{-- <th scope="row">{{$key+1}}</th> --}}
         <td>{{NumConvert::word($item['chapter_id'])}}</td>
-        <td>{{$item['format']}}</td>
+        {{-- <td>{{$item['format']}}</td> --}}
         <td>
           <audio
             controls

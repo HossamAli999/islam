@@ -31,4 +31,9 @@ class pagesController extends Controller
         $quran = Http::get('https://api.quran.com/api/v4/chapter_recitations/1?language=en')->json();
         return view('pages.listen',['quran' => $quran]);
     }
+
+    public function start()
+    {
+        return view('pages.start');
+    }
 }

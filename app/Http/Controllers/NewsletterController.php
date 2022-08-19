@@ -22,7 +22,7 @@ class NewsletterController extends Controller
         ]);
 
         if($validator->fails()){
-            return redirect()->back()->with('error',$validator->errors()->all());
+            return redirect()->back()->with('error_subscribed',$validator->errors()->all());
         }
 
         newsletter::create([
