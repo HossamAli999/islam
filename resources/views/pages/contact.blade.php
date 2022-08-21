@@ -68,14 +68,23 @@
                     <div class="form-group">
                         <label>Name *</label>
                         <input type="text" name="name" class="form-control" required="required">
+                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label>Email *</label>
                         <input type="email" name="email" class="form-control" required="required">
+                        @if ($errors->has('email'))
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
+                        <label>Phone *</label>
                         <input type="number" name="phone" class="form-control">
+                        @if ($errors->has('phone'))
+                        <span class="text-danger">{{ $errors->first('phone') }}</span>
+                    @endif
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -85,7 +94,7 @@
                     </div>
                     <div class="form-group">
                         <label>Message *</label>
-                        <input name="message" id="message"  rows="8" class="form-control">
+                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                         @if ($errors->has('message'))
                             <span class="text-danger">{{ $errors->first('message') }}</span>
                         @endif
