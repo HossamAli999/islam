@@ -107,10 +107,12 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cloud-download"></i>
-                            <h2>Title</h2>
-                            <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
+                        <div class="feature-wrap" >
+                            <a href="https://ia600405.us.archive.org/17/items/TvQuran.com__Al-MinshawiZip/TvQuran.com__Al-Minshawi.zip">
+                             <i class="fa fa-cloud-download"></i>
+                            </a>
+                            <h2> تحميل القران الكريم كاملا</h2>
+                            <h3>بصوت القارئ محمد صديق المنشاوي</h3>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
