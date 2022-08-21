@@ -37,6 +37,8 @@ Route::post('newsletter', [App\Http\Controllers\NewsletterController::class, 'ne
 // for contact form
 Route::post('contact-us', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.us.store');
 
+// for quran pdf
+Route::get('quran-pdf', [App\Http\Controllers\pagesController::class, 'quran_pdf'])->name('quran-pdf');
 
 
 Route::fallback(function(){

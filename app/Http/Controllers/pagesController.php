@@ -41,4 +41,9 @@ class pagesController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function quran_pdf()
+    {
+        return view('pages.quran-pdf');
+    }
 }
