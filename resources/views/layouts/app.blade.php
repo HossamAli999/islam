@@ -147,10 +147,10 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="widget">
-                            <h3>Information</h3>
+                            <h3>Quran</h3>
                             <ul>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
+                                <li><a href="{{route('reference')}}">reference</a></li>
+                                <li><a href="{{route('listen')}}">listen</a></li>
                                 <li><a href="#">Link</a></li>
                                 <li><a href="#">Link</a></li>
                             </ul>
